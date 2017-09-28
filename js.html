@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tab li {
+            display: inline-block;
+        }
+
+        .con {
+            display: none;
+        }
+    </style>
+    <script language="javascript">
+        window.onload = function () {
+            var nav = document.getElementById("tab").getElementsByTagName("li");
+            var con = document.getElementsByClassName('con');
+            for (let i = 0; i < nav.length; i++) {
+                nav[i].onmouseover = function () {
+                    for (var n = 0; n < con.length; n++) {
+                        con[n].style.display = "none";
+                    }
+                    con[i].style.display = "block"
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="tab">
+    <ul>
+        <li>菜单一</li>
+        <li>菜单二</li>
+        <li>菜单三</li>
+        <li>菜单四</li>
+    </ul>
+</div>
+<div>
+    <div class="con">
+        <ul>
+            <li>11111111111111111111</li>
+        </ul>
+    </div>
+    <div class="con">
+        <ul>
+            <li>222222222222222222222</li>
+        </ul>
+    </div>
+    <div class="con">
+        <ul>
+            <li>333333333333333333</li>
+        </ul>
+    </div>
+    <div class="con">
+        <ul>
+            <li>44444444444444444444</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
